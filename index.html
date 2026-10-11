@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Türkiye Haritası - Canlı Veri Akışı</title>
+    <meta
+      name="description"
+      content="Türkiye haritası üzerinde canlı veri akışı, bölge adları, konumlar ve yol/rota gösterimi."
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-badge">TR</span>
+          <div>
+            <h1>Türkiye Haritası</h1>
+            <p>Canlı akış ve bölge görünümü</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="label">Aktif bölgeler</span>
+            <strong id="active-count">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="label">Akış değeri</span>
+            <strong id="stream-value">0</strong>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Bölgeler</h2>
+            <button id="reset-view">Merkez</button>
+          </div>
+          <ul id="region-list" class="region-list"></ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Canlı akış</h2>
+          </div>
+          <ul id="stream-feed" class="stream-feed"></ul>
+        </div>
+      </aside>
+
+      <main class="map-area">
+        <div id="map"></div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
